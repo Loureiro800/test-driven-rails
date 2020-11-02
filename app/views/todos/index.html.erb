@@ -1,1 +1,10 @@
 <h1>Todos</h1>
+
+<% if @todos.any? %>
+  <ul class='todos'>
+    <% @todos.each do |todo| %>
+      <li><%= todo.title %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to 'Add a new todo', new_todo_path %>
