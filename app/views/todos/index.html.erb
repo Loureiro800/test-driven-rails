@@ -6,6 +6,7 @@
       <li class="<%= 'completed' if todo.completed? %>">
         <%= todo.title %>
         <% if todo.completed? %>
+          <%= link_to 'Mark incomplete', todo_completion_destroy_path(todo) %>
         <% else %>
           <%= link_to 'Mark complete', todo_completion_path(todo) %>
         <% end %>
